@@ -1,9 +1,10 @@
 winboxHunter
 ============
 #Prerequisites:
-- Impacket (svn checkout http://impacket.googlecode.com/svn/trunk/ impacket-read-only)
-- Ruby
-
+```
+-Impacket (svn checkout http://impacket.googlecode.com/svn/trunk/ impacket-read-only)
+-Ruby
+```
 
 #Description:
 If you are working on a penetration test remotely, its sometimes hard to determine when the users start work or connect their laptops to the network.
@@ -16,18 +17,23 @@ In the background, winboxHunter runs Metasploit with payload handler (multi/hand
 - See meterpreter.rc and autorunCmd.rc for more details.
 
 #Format of password.txt
-- domain/username password
-
+```
+domain/username password
+```
 
 #Instructions:
 - You can either supply your own meterpreter payload executable (payload=windows/meterpreter/reverse_https, rport=8443) using -e or --exe argument
 - or you can use the -n or --enableVeil argument to generate a meterpreter payload executable using Veil Evasion
 
 You can run winboxHunter using the below sample command
-- ruby winboxHunter.rb -n -f password.txt -v
+```
+ruby winboxHunter.rb -n -f password.txt -v
+```
 
 When you run winboxHunter, a linux screen with the name "msfscreen" will be created and msfconsole will be executed. You can connect to the screen via the below command
-- screen -dr msfscreen
+```
+screen -dr msfscreen
+```
 
 ![alt tag](https://raw.githubusercontent.com/milo2012/winboxHunter/master/screenshot.png)
 
