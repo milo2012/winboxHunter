@@ -1,11 +1,11 @@
 winboxHunter
 ============
-Prerequisites:
+#Prerequisites:
 - Impacket (svn checkout http://impacket.googlecode.com/svn/trunk/ impacket-read-only)
 - Ruby
 
 
-Description:
+#Description:
 If you are working on a penetration test remotely, its sometimes hard to determine when the users start work or connect their laptops to the network.
 
 winboxHunter is useful if you have managed to capture and cracked a bunch of NTLM credentails and want to run Metasploit against these windows boxes as and when they are connected to the network.
@@ -15,11 +15,11 @@ winboxHunter listens for broadcast packets so that when a new winBox is connecte
 In the background, winboxHunter runs Metasploit with payload handler (multi/handler) and listens for incoming connections once the meterpreter payload is executed by the winboxes.
 - See meterpreter.rc and autorunCmd.rc for more details.
 
-Format of password.txt
+#Format of password.txt
 - domain/username password
 
 
-Instructions:
+#Instructions:
 - You can either supply your own meterpreter payload executable (payload=windows/meterpreter/reverse_https, rport=8443) using -e or --exe argument
 - or you can use the -n or --enableVeil argument to generate a meterpreter payload executable using Veil Evasion
 
