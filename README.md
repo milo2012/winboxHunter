@@ -33,8 +33,11 @@ domain/username password
 
 #Instructions:
 Meterpreter executable 
+- You only need to use one of the below 2 options
+```
 - You can either use your own meterpreter payload executable  using the -e or --exe argument (payload=windows/meterpreter/reverse_https, rport=8443) or
 - You can use the -n or --enableVeil argument to generate a meterpreter payload executable using Veil Evasion
+```
 
 You can run winboxHunter using the below sample command
 ```
