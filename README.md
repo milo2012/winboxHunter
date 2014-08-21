@@ -5,6 +5,7 @@ winboxHunter
 Python2.7
 Impacket (svn checkout http://impacket.googlecode.com/svn/trunk/ impacket-read-only)
 Ruby
+Veil Evasion (git clone https://github.com/Veil-Framework/Veil-Evasion.git)
 ```
 
 #Description:
