@@ -111,7 +111,7 @@ def runSMB(ipAddr)
 			end
 			#timeout_cmd(cmd1,15)
 		end
-		if completed=false
+		if completed==false
 			if $verbose==true
 				results = run_cmd(cmd2)
 				puts results
@@ -631,7 +631,7 @@ opt_parser = OptionParser.new do |opt|
   opt.on("-f","--file PASSWORD_FILE","which file do you want to get the credentials from") do |passwordFile|
     options[:passwordFile] = passwordFile
   end
-  opt.on("-m","--msf LOG","which file do you want to get the credentials from") do |msfLog|
+  opt.on("-m","--msf LOG","which file do you want to write metasploit logs to") do |msfLog|
     options[:msfLog] = msfLog
   end
   opt.on("-i","--interface iface","which network interface do you want to listen on") do |iface|
