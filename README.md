@@ -14,7 +14,9 @@ winboxHunter is useful if you have managed to capture and cracked a bunch of NTL
 winboxHunter listens for broadcast packets so that when a new winBox is connected to the network, it will use the Impacket scripts (psexec.py and wmiexec.py) to push an executable onto the winBox and runs it.
 
 In the background, winboxHunter runs Metasploit with payload handler (multi/handler) and listens for incoming connections once the meterpreter payload is executed by the winboxes.
-- See meterpreter.rc and autorunCmd.rc for more details.
+```
+See meterpreter.rc and autorunCmd.rc for more details.
+```
 
 #Format of password.txt
 ```
@@ -22,8 +24,9 @@ domain/username password
 ```
 
 #Instructions:
-- You can either supply your own meterpreter payload executable (payload=windows/meterpreter/reverse_https, rport=8443) using -e or --exe argument
-- or you can use the -n or --enableVeil argument to generate a meterpreter payload executable using Veil Evasion
+Meterpreter executable 
+- You can either use your own meterpreter payload executable  using the -e or --exe argument (payload=windows/meterpreter/reverse_https, rport=8443) or
+- You can use the -n or --enableVeil argument to generate a meterpreter payload executable using Veil Evasion
 
 You can run winboxHunter using the below sample command
 ```
