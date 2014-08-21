@@ -40,6 +40,7 @@ Meterpreter executable
 ```
 
 You can run winboxHunter using the below sample command
+![alt tag](https://raw.githubusercontent.com/milo2012/winboxHunter/master/screenshot.png)
 ```
 ruby winboxHunter.rb -n -f password.txt -v
 ```
@@ -49,5 +50,4 @@ When you run winboxHunter, a linux screen with the name "msfscreen" will be crea
 screen -dr msfscreen
 ```
 
-![alt tag](https://raw.githubusercontent.com/milo2012/winboxHunter/master/screenshot.png)
 
