@@ -5,6 +5,7 @@ If you are working on a penetration test remotely, its sometimes hard to determi
 
 winboxHunter is useful if you have managed to capture and cracked a bunch of NTLM credentails and want to run Metasploit against these windows boxes as and when they are connected to the network.
 
+winboxHunter listens for broadcast packets so that when a new winBox is connected to the network, it will use the Impacket scripts (psexec.py and wmiexec.py) to push and execute an exe on the winBox.
 
 ![alt tag](https://raw.githubusercontent.com/milo2012/winboxHunter/master/screenshot.png)
 
