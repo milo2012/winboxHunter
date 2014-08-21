@@ -14,7 +14,11 @@ winboxHunter is useful if you have managed to capture and cracked a bunch of NTL
 winboxHunter listens for broadcast packets so that when a new winBox is connected to the network, it will use the Impacket scripts (psexec.py and wmiexec.py) to push an executable onto the winBox and runs it.
 
 In the background, winboxHunter runs Metasploit with payload handler (multi/handler) and listens for incoming connections once the meterpreter payload is executed by the winboxes. 
+
 You might want to modify autorunCmd.rc to specify the Metasploit commands you want to run on the pwned winbox upon connecting back to Metasploit.
+
+If a host changes its IP address due to DHCP lease expiration, it will not attempt to exploit the winbox twice.
+
 ```
 See meterpreter.rc and autorunCmd.rc for more details.
 ```
