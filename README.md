@@ -17,7 +17,7 @@ Format of password.txt
 - domain/username password
 
 Instructions
-- You can either supply your own meterpreter payload executable (payload=windows/meterpreter/reverse_https,rport=8443) using -e or --exe argument
+- You can either supply your own meterpreter payload executable (payload=windows/meterpreter/reverse_https, rport=8443) using -e or --exe argument
 - or you can use the -n or --enableVeil argument to generate a meterpreter payload executable using Veil Evasion
 
 You can run winboxHunter using the below sample commands
