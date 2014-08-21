@@ -2,8 +2,9 @@ winboxHunter
 ============
 #Prerequisites:
 ```
--Impacket (svn checkout http://impacket.googlecode.com/svn/trunk/ impacket-read-only)
--Ruby
+Python2.7
+Impacket (svn checkout http://impacket.googlecode.com/svn/trunk/ impacket-read-only)
+Ruby
 ```
 
 #Description:
